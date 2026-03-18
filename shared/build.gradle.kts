@@ -8,6 +8,9 @@ plugins {
 
 kotlin {
     androidTarget()
+    iosArm64()
+    iosX64()
+    iosSimulatorArm64()
 
     sourceSets {
         commonMain {
@@ -20,6 +23,12 @@ kotlin {
                 implementation(libs.compose.ui.tooling.preview)
                 implementation(libs.compose.material3)
                 implementation(libs.compose.navigation)
+            }
+        }
+        commonTest {
+            dependencies {
+                implementation(libs.kotest.framework)
+                implementation(libs.kotest.assertions)
             }
         }
     }

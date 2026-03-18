@@ -16,3 +16,4 @@ dependencyResolutionManagement {
 rootProject.name = "LingoLearnV2"
 include(":androidApp")
 include(":shared")
+include(":iosApp")

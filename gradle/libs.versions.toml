@@ -10,6 +10,7 @@ realm = "1.13.0"
 koin = "3.5.3"
 vico = "1.13.1"
 coroutines = "1.7.3"
+kotest = "5.8.0"
 
 [libraries]
 androidx-core = { module = "androidx.core:core-ktx", version = "1.12.0" }
@@ -32,6 +33,8 @@ koin-androidx-compose = { module = "io.insert-koin:koin-androidx-compose", versi
 vico-compose = { module = "com.patrykandpatrick.vico:compose", version.ref = "vico" }
 vico-compose-m3 = { module = "com.patrykandpatrick.vico:compose-m3", version.ref = "vico" }
 vico-core = { module = "com.patrykandpatrick.vico:core", version.ref = "vico" }
+kotest-framework = { module = "io.kotest:kotest-framework-engine", version.ref = "kotest" }
+kotest-assertions = { module = "io.kotest:kotest-assertions-core", version.ref = "kotest" }
 
 [plugins]
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
