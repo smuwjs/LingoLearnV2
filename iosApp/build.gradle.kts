@@ -1,7 +1,5 @@
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
-    alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.android.application)
 }
 
 kotlin {
@@ -15,29 +13,5 @@ kotlin {
                 implementation(project(":shared"))
             }
         }
-        iosMain {
-        }
     }
-}
-
-android {
-    namespace = "com.lingolearn.app.ios"
-    compileSdk = 34
-
-    defaultConfig {
-        applicationId = "com.lingolearn.app.ios"
-        minSdk = 24
-        targetSdk = 34
-    }
-}
-
-tasks.register("buildIosApp", Exec::class) {
-    workingDir = project.projectDir
-    commandLine = "xcodebuild"
-    args = listOf(
-        "-scheme", "iosApp",
-        "-configuration", "Debug",
-        "-destination", "platform=iOS Simulator,name=iPhone 15",
-        "build"
-    )
 }

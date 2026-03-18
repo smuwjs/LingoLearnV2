@@ -12,17 +12,26 @@ kotlin {
     iosX64()
     iosSimulatorArm64()
 
+    sourceSets.all {
+        languageSettings.optIn("kotlin.ExperimentalStdlibApi")
+    }
+
     sourceSets {
         commonMain {
             dependencies {
                 implementation(libs.kotlinx.coroutines.core)
-                implementation(libs.androidx.lifecycle.viewmodel.compose)
-                implementation(libs.koin.android)
                 implementation(libs.compose.ui)
                 implementation(libs.compose.ui.graphics)
                 implementation(libs.compose.ui.tooling.preview)
                 implementation(libs.compose.material3)
-                implementation(libs.compose.navigation)
+            }
+        }
+
+        androidMain {
+            dependencies {
+                implementation(libs.koin.android)
+                implementation(libs.androidx.lifecycle.viewmodel.compose)
+                implementation("androidx.navigation:navigation-compose:2.5.3")
             }
         }
         commonTest {
