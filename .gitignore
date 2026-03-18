@@ -1,0 +1,19 @@
+# Built files
+build/
+.gradle/
+.kotlin/
+
+# IDE
+.idea/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local config
+local.properties
+*.local
+
+# Logs
+*.log

@@ -1,0 +1,42 @@
+[versions]
+agp = "8.2.2"
+android-minSdk = "24"
+android-targetSdk = "34"
+kotlin = "2.0.0"
+compose = "1.6.0"
+compose-compiler = "1.6.0"
+navigation = "2.5.3"
+realm = "1.13.0"
+koin = "3.5.3"
+vico = "1.13.1"
+coroutines = "1.7.3"
+
+[libraries]
+androidx-core = { module = "androidx.core:core-ktx", version = "1.12.0" }
+androidx-activity-compose = { module = "androidx.activity:activity-compose", version = "1.8.2" }
+androidx-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version = "2.7.0" }
+compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose" }
+compose-ui-graphics = { module = "androidx.compose.ui:ui-graphics", version.ref = "compose" }
+compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose" }
+compose-material3 = { module = "androidx.compose.material3:material3", version = "1.2.1" }
+compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
+compose-ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest", version.ref = "compose" }
+compose-material-icons-extended = { module = "androidx.compose.material:material-icons-extended", version.ref = "compose" }
+compose-compiler = { module = "androidx.compose.compiler:compiler", version.ref = "compose-compiler" }
+compose-navigation = { module = "androidx.navigation:navigation-compose", version.ref = "navigation" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
+kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutines" }
+realm-base = { module = "io.realm.kotlin:library-base", version.ref = "realm" }
+koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
+koin-androidx-compose = { module = "io.insert-koin:koin-androidx-compose", version.ref = "koin" }
+vico-compose = { module = "com.patrykandpatrick.vico:compose", version.ref = "vico" }
+vico-compose-m3 = { module = "com.patrykandpatrick.vico:compose-m3", version.ref = "vico" }
+vico-core = { module = "com.patrykandpatrick.vico:core", version.ref = "vico" }
+
+[plugins]
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+kotlin-plugin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+android-library = { id = "com.android.library", version.ref = "agp" }
+android-application = { id = "com.android.application", version.ref = "agp" }
+realm = { id = "io.realm.kotlin", version.ref = "realm" }
