@@ -20,8 +20,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.viewmodel.compose.viewModel
 import com.lingolearn.app.shared.ui.component.DueReviewBadge
+import org.koin.androidx.compose.koinViewModel
 import com.lingolearn.app.shared.ui.component.ProgressRing
 import com.lingolearn.app.shared.ui.component.StreakBadge
 
@@ -31,7 +31,7 @@ fun HomeScreen(
     onQuickReview: () -> Unit,
     onRandomTest: () -> Unit,
     modifier: Modifier = Modifier,
-    viewModel: HomeViewModel = viewModel()
+    viewModel: HomeViewModel = koinViewModel()
 ) {
     val uiState by viewModel.uiState.collectAsState()
 

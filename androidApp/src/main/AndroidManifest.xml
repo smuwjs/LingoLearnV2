@@ -7,11 +7,11 @@
         android:allowBackup="true"
         android:icon="@android:drawable/sym_def_app_icon"
         android:label="LingoLearn"
-        android:theme="@android:style/Theme.Material.Light">
+        android:theme="@android:style/Theme.Material.Light.NoActionBar">
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:theme="@android:style/Theme.Material.Light">
+            android:theme="@android:style/Theme.Material.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

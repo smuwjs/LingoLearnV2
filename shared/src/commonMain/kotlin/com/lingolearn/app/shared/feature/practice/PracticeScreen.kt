@@ -33,7 +33,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.viewmodel.compose.viewModel
+import org.koin.androidx.compose.koinViewModel
 import com.lingolearn.app.shared.ui.theme.Error
 import com.lingolearn.app.shared.ui.theme.Success
 
@@ -42,7 +42,7 @@ fun PracticeScreen(
     onNavigateBack: () -> Unit,
     modifier: Modifier = Modifier,
     questionType: QuestionType = QuestionType.MULTIPLE_CHOICE,
-    viewModel: PracticeViewModel = viewModel()
+    viewModel: PracticeViewModel = koinViewModel()
 ) {
     val uiState by viewModel.uiState.collectAsState()
 

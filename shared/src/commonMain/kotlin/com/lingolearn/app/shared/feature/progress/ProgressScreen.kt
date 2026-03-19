@@ -36,14 +36,14 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.viewmodel.compose.viewModel
+import org.koin.androidx.compose.koinViewModel
 import com.lingolearn.app.shared.ui.theme.Success
 import com.lingolearn.app.shared.ui.theme.Warning
 
 @Composable
 fun ProgressScreen(
     modifier: Modifier = Modifier,
-    viewModel: ProgressViewModel = viewModel()
+    viewModel: ProgressViewModel = koinViewModel()
 ) {
     val uiState by viewModel.uiState.collectAsState()
 
@@ -136,7 +136,7 @@ fun ProgressScreen(
 
 @Composable
 private fun WeeklyChart(data: Map<Long, Int>) {
-    val maxCount = data.values.maxOrNull() ?: 1
+    val maxCount = (data.values.maxOrNull() ?: 1).coerceAtLeast(1)
     val sortedData = data.entries.sortedBy { it.key }
 
     Row(

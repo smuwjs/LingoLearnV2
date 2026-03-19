@@ -27,7 +27,7 @@ import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.viewmodel.compose.viewModel
+import org.koin.androidx.compose.koinViewModel
 import com.lingolearn.app.shared.ui.component.FlashCard
 import kotlin.math.roundToInt
 
@@ -35,7 +35,7 @@ import kotlin.math.roundToInt
 fun LearningScreen(
     onNavigateBack: () -> Unit,
     modifier: Modifier = Modifier,
-    viewModel: LearningViewModel = viewModel(),
+    viewModel: LearningViewModel = koinViewModel(),
     isReviewMode: Boolean = false
 ) {
     val uiState by viewModel.uiState.collectAsState()

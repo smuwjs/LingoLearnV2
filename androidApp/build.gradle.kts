@@ -28,5 +28,7 @@ dependencies {
     implementation(libs.compose.ui.tooling.preview)
     implementation(libs.compose.material3)
     implementation(libs.kotlinx.coroutines.android)
+    implementation(libs.koin.android)
+    implementation(libs.koin.androidx.compose)
     debugImplementation(libs.compose.ui.tooling)
 }

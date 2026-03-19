@@ -8,9 +8,6 @@ plugins {
 
 kotlin {
     androidTarget()
-    iosArm64()
-    iosX64()
-    iosSimulatorArm64()
 
     sourceSets.all {
         languageSettings.optIn("kotlin.ExperimentalStdlibApi")
@@ -24,6 +21,7 @@ kotlin {
                 implementation(libs.compose.ui.graphics)
                 implementation(libs.compose.ui.tooling.preview)
                 implementation(libs.compose.material3)
+                implementation(libs.koin.androidx.compose)
             }
         }
 
@@ -31,7 +29,7 @@ kotlin {
             dependencies {
                 implementation(libs.koin.android)
                 implementation(libs.androidx.lifecycle.viewmodel.compose)
-                implementation("androidx.navigation:navigation-compose:2.5.3")
+                implementation(libs.compose.navigation)
             }
         }
         commonTest {
